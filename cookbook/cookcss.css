@@ -1,0 +1,667 @@
+/*General stylesheet*/
+
+/*|Body*/
+body {
+        background-color: #6488a8;
+	margin: 0px;
+	padding: 0px;
+	min-width: 1000px;
+}
+/*|Tables*/
+#steplist, #recipelist, #ingredientlist{
+	display: inline-block;
+	margin-top: 70px;
+	margin-bottom: 30px;
+}
+table, textarea{
+	background-color: #eed8ae;
+	border-radius: 15px;
+}
+table, td, th, #recipebutton, input[type="submit"], input[type="button"], textarea, #donelist {
+	font-family: Arial, Verdana, "Times New Roman";
+	font-size: 23px;
+	color: black;
+}
+.hover{
+	box-shadow: 4px 4px 4px #1c2731;
+}
+h1, h2, h3{
+	font-family: Arial, Verdana, "Times New Roman";
+}
+td, th {
+	border-collapse: collapse;
+}
+td{
+	padding: 3px;
+	margin-left: 0px;
+}
+th{
+	padding: 5px;
+}
+tr:nth-child(2n){
+	background-color: #98896f;
+}
+a, p {
+	font-family: Arial, Verdana, "Times New Roman";
+}
+.headlink:link, .headlink:visited {
+	transition: background-color .3s;
+	display: inline-block;
+	border: 2px solid #374e62;
+	border-radius: 6px;
+	color: black;
+	background-color: #98896f;
+	padding: 10px 25px;
+	margin-right: 5px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: top;
+	float: left;
+	}
+.headlink:hover {
+	transition: background-color .3s;
+	background-color: #eed8ae;
+}
+.headlink:active, #recipebutton:active {
+        text-decoration: underline;
+}
+input[type="checkbox"]{
+	display: none;
+}
+/*Visuals for checkboxes*/
+input[type="checkbox"] + label span{
+	display:inline-block;
+	margin-left: 15px;
+	width:25px;
+	height:25px;
+	cursor: pointer;
+	background:url(baseimages/check.png) left top no-repeat;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+input[type="checkbox"]:checked + label span{
+	background:url(baseimages/check.png) -25px top no-repeat;
+}
+/*|Banner on each page*/
+#banner {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 0px;
+	width: 100%;
+	background-color: #496883;
+	border: 3px solid #374e62;
+	border-right: none;
+	border-top: none;
+	border-left: none;
+	padding-bottom:45px;
+	padding-top:5px;
+	box-shadow: 0px 4px 4px #1c2731;
+}
+/*|Text fields*/
+#searchbox{
+        display: inline-block;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 2px solid #374e62;
+        border-top: 3px solid #374e62;
+        border-bottom: 3px solid #374e62;
+        border-left: 3px solid #374e62;
+        padding: 5px;
+        margin-top: 3px;
+        background-color: #eed8ae;
+        vertical-align: top;
+        float: left;
+}
+textarea {
+        border: 2px solid black;
+        padding: 5px;
+}
+input[type=text]:focus, #recipebutton:focus, textarea:focus, #donelist:focus{
+        outline: none;
+}
+#subsearch{
+	display: relative;
+	margin-top: 3px;
+	vertical-align: top;
+	float: left;
+}
+#subsearch:focus{
+	outline:none;
+}
+input[type="text"], #inputwhattodo{
+	background-color: #eed8ae;
+	border: 3px solid #374e62;
+	height: 35px;
+	font-size: 17px;
+	border-radius: 5px;
+	padding: 5px;
+	}
+/*|Buttons*/
+/*Buttons within table*/
+#recipebutton{
+	cursor: pointer;
+        transition: background-color .2s;
+        margin-top: -4px;
+        margin-bottom: -4px;
+        border: none;
+        background: none;
+        width: 100%;
+        padding-top: 3px;
+        padding-bottom: 3px;
+}
+#recipebutton:hover{
+        transition: background-color .2s;
+        background-color: #c7b491;
+}
+input[type="submit"], input[type="button"], #fileup, #donelist{
+	transition: background-color .3s;
+	border: 2px solid black;
+	background-color: #98896f;
+	border-radius: 5px;
+}
+input[type="submit"]:active, input[type="button"]:active, #donelist:active{
+	outline: none;
+	text-decoration: underline;
+}
+input[type="submit"]:hover, input[type="button"]:hover, #donelist:hover{
+	background-color: #eed8ae;
+}
+
+#deletebutton:hover{
+	cursor: pointer;
+	transition: background-color .3s;
+	background-color:red;
+}
+/**/
+#ingredientnum, #stepnum, #hournum, #minutenum{
+	width: 45px;
+}
+/*|Classes*/
+/*|Left cells in table*/
+.left, #recipebutton{
+	border-radius: 15px 0px 0px 15px;
+}
+/*|Right cells in table*/
+.right{
+	border-radius: 0px 15px 15px 0px;
+}
+.leftright{
+	border-radius: 15px 15px 15px 15px;
+}
+/*|Numbers in table*/
+.number{
+	text-align: center;
+}
+.number.left{
+	padding-left: 5px;
+}
+/*HEADER PAGE*/
+#headertop{
+position: fixed; left: 0px;
+}
+#cookbooklink{
+margin-left: 5px;
+}
+#addlink{
+}
+#cookbookimage{
+	display: none;
+}
+#insertimage{
+	display: none;
+}
+#advsearchimg{
+	display: none;
+}
+#listimg{
+	display: none;
+}
+#searchdiv{
+	position: fixed; 
+	left:41%;
+}
+#searchbox{
+	border-top-right-radius: 0px; 
+	border-bottom-right-radius: 0px;
+	float: left;
+        display: inline-block;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 2px solid #374e62;
+        border-top: 3px solid #374e62;
+        border-bottom: 3px solid #374e62;
+        border-left: 3px solid #374e62;
+        padding: 5px;
+        margin-top: 0px;
+        background-color: #eed8ae;
+        float: left;
+}
+#subsearch{
+        margin-top: 0px;
+	height: 29px;
+	width: 29px;
+	border-left: none;
+	border-right: 3px solid #374e62;
+	border-top: 3px solid #374e62;
+  	border-bottom: 3px solid #374e62;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#rightdiv{
+	position: fixed; 
+	right: 0px;
+}
+#advsearchlink{
+	position: fixed; 
+	right: 5px;
+}
+/*COOKBOOK PAGE AND SEARCHRES PAGE*/
+#bookbody{
+	width: 100%;
+	text-align: center;
+}
+#recipelist{
+	margin-left: 2%;
+        margin-right: 2%;
+}
+#recipe{
+        padding-left: 0px;
+        padding-right: 0px;
+}
+#noresultdiv{
+width: 100%; word-break: break-all; text-align: center;
+}
+#noresult{
+margin-top: 100px; cols: 10;
+}
+/*INSERT PAGE AND EDIT PAGE*/
+#recinfoinput{
+	margin-top: 75px;
+	width: 100%;
+}
+#recinputtable{
+	margin-left: 4%;
+	float: left;
+}
+#recinputtable2{
+	margin-left: 3%;
+	float: left;
+}
+#recinputtitle{
+	border: solid black; margin-left: 20px; margin-right: 5px;
+}
+#hournum{
+border: solid black; margin-left: 23%;
+}
+#minutenum{
+border: solid black; margin-left: 29%;
+}
+#typecolumn{
+width: 170px;
+}
+#typeinput{
+border: solid black; margin-left: 8%; margin-right: 5px; width: 150px;
+}
+#genrecolumn{
+width: 170px;
+}
+#genreinput{
+border: solid black; margin-left: 8%; margin-right: 10px; width: 150px;
+}
+#calperserv{
+border: solid black; width: 100px; margin-left: 25%;
+}
+#numserv{
+border: solid black; width: 3em; margin-left: 30%;
+}
+#stepsinputdiv{
+float: left; margin-top: 20px; margin-left: 5%;
+}
+#inputwhattodo{
+width: 25em; height: 4em; border: solid black; margin-right: 10px; margin-left: 5px; margin-top: 5px; margin-bottom: 5px; resize: none;
+}
+#addstep{
+cursor: pointer;
+float: left; margin-top: 30px; margin-bottom: 10px; margin-left: 5%;
+}
+#deletestep{
+	cursor: pointer;
+	margin-top: 30px; 
+	float: left; 
+	margin-left: 5%;
+	clear: right;
+}
+#finalsubmit{
+cursor: pointer;
+float: left; margin-top: 30px; margin-left: 5%; margin-bottom: 10px;
+}
+#ingredientinputdiv{
+float: left; margin-top: 20px; margin-left: 15%;
+}
+#ingredientbox{
+margin-left: 10px; margin-right: 5px; margin-top: 2px; margin-bottom: 2px; border: solid black;
+}
+#amountbox{
+margin-left: 5px; margin-right: 10px; margin-top: 2px; margin-bottom: 2px; border: solid black; width: 10em;
+}
+#addingredient{
+cursor: pointer;
+margin-top: 30px; margin-bottom: 10px; float: left; margin-left: 10%;
+}
+#deleteingredient{
+cursor: pointer;
+margin-top: 30px; float: left; margin-left:5%;
+}
+/*RECIPE PAGE*/
+#listtheingredients{
+float: left; margin-left: 2%; margin-right: 3%; max-width: 30%;
+}
+#listthesteps{
+float: left; max-width: 40%;
+}
+/*side area*/
+#siderevealdiv, sidereveal{
+	display: none;
+}
+#side{
+	text-align: center; 
+	position: fixed; 
+	width: 20%; 
+	right:0px; 
+	top:53px; 
+	height: calc(100% - 53px); 
+	border-left: 3px solid #374e62; 
+	padding-left:1.5%; 
+	padding-right:1.5%; 
+	background-color: #496883;
+	overflow: auto;
+}
+/*top buttons*/
+#delform{
+margin-bottom: 1%;
+}
+#editform{
+margin-bottom: 1%;
+}
+#deletebutton{
+cursor: pointer;
+display: block; width: 7em; margin-top: 1%; margin-left: auto; margin-right: auto;
+}
+#editbutton{
+cursor: pointer;
+display: block; width: 7em; margin-left: auto; margin-right: auto;
+}
+/*Calorie info*/
+#calinfo{
+margin-right: auto; margin-left: auto; margin-top: 2%; table-layout: fixed; margin-bottom: 10px;
+}
+/*Image operations*/
+#fileupform{
+/*Nothing on wide devices*/
+}
+#filechangeform{
+margin-bottom: 1%;
+}
+#filedelform{
+margin-bottom: 1%;
+}
+#sideform{
+margin-top: 1%;
+}
+#imagediv{
+height: 25%;
+}
+#recimage{
+max-width: 100%; max-height: 100%; border-radius: 15px; border: 2px solid black;
+}
+#fileup{
+padding: 5px; margin-top: 10px;
+}
+#upimg{
+cursor: pointer;
+margin-top: 2px;
+}
+#changeimg{
+cursor: pointer;
+margin-top: 2px; position: relative; display: inline-block; right: 0px;
+}
+/*Fake table formatting for button layout*/
+#setup{
+display: block; margin-right: auto; margin-left: auto; margin-left: 10px; margin-right: 10px margin-bottom: 0px;
+}
+#tab{
+display: table;
+}
+#rw{
+display: table-row;
+}
+#col1{
+display: table-cell;
+}
+#col2{
+display: table-cell; padding-left: 2px;
+}
+#subremove{
+cursor: pointer;
+margin-top: 2px; margin-right: 2px; position: relative; display: inline-block; right: 0px;
+}
+/*Note stuff*/
+#addnote{
+display: block; margin-right: auto; margin-left: auto; margin-top: 15px; width:7em;
+cursor: pointer;
+}
+#notetext{
+float: right; width: 100%; height: 6em; clear: right; margin-top: 10px; resize: none;
+}
+#savenote{
+float: right; margin-top: 10px; margin-right: 27%; clear: right;
+cursor: pointer;
+}
+/*LISTGEN PAGE*/
+#genheaderdiv{
+	margin-top: 75px;
+	text-align: center;
+}
+.listheader{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	background-color: #98896f;
+	border: 3px solid black;
+	border-radius: 5px;
+}
+#listgenrecipes{
+	margin-left: auto;
+	margin-right: auto;
+}
+#sublist{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*LIST PAGE*/
+#listbuffer{
+	margin-top: 75px;
+}
+.reclist{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+#listend{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	margin-bottom: 15px;
+}
+#clearlist{
+	margin-left: 25px;
+	margin-right: 10px;
+}
+#donelist{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-decoration: none;
+}
+/*ADV SEARCH PAGE*/
+#advsearchheader{
+	text-align: center;
+	margin-top: 75px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#leftbox{
+	float: left;
+	width: calc(50% - 15px);
+	margin-left: 15px;
+}
+#advtextdiv{
+	padding: 15px;
+	width: 233px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+}
+#advrecipename{
+	display: block;
+	border: 3px solid black;
+}
+#advrecipetype{
+	margin-top: 10px;
+	display: block;
+	border: 3px solid black;
+}
+#advrecipegenre{
+	margin-top: 10px;
+	display: block;
+	border: 3px solid black;
+}
+#advservdiv{
+	float: left;
+	padding-left: 15px;
+	height: 50px;
+	width: 225px;
+	margin-left: 10%;
+	margin-right: 7%;
+}
+#advservp{
+	display: inline;
+	position: relative;
+	top: 8px;
+}
+#advservnum{
+	display: inline;
+	position: relative;
+	top: 8px;
+	left: 10px;
+	width: 3em;
+	border: solid black;
+}
+#advcalperservdiv{
+	clear: right;
+	float: left;
+	height: 50px;
+	width: 230px;
+	padding-left: 15px;
+}
+#calperservp{
+	display: inline;
+}
+#advcalperserv{
+	margin-top: 8px;
+	margin-left: 10px;
+	width: 3em;
+	border: solid black;
+}
+#advhoursdiv{
+	float: left;
+	margin-left: 16%;
+	margin-top: 15px;
+	width: 120px;
+	padding: 10px;
+	padding-left: 15px;
+}
+#advhoursp{
+	display: inline;
+}
+#advhours{
+	margin-left: 10px;
+	width: 3em;
+	border: solid black;
+}
+#advminsdiv{
+	float: left;
+	margin-left: 21%;
+	margin-top: 15px;
+	width: 133px;
+	padding: 10px;
+	padding-left: 15px;
+}
+#advminsp{
+	display: inline;
+}
+#advmins{
+	margin-left: 10px;
+	width: 3em;
+	border: solid black;
+}
+#rightbox{
+	float: right;
+	width: calc(50% - 15px);
+	margin-right: 15px;
+}
+#advsearchsub{
+	float: left;
+	margin-left: 42%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 3px solid black;
+}
+.fieldheader{
+	background-color: #98896f;
+	border: 3px solid black;
+	border-radius: 5px 5px 5px 5px;
+}
+#askinclude{
+	float: left;
+	clear: right;
+	margin-top: 15px;
+	margin-left: 22%;
+	height: 50px;
+	width: 360px;
+	padding-left: 15px;
+}
+#includelabel{
+	display: inline-block;
+	position: relative;
+	top: 9px;
+	left: 0px;
+}
+#includep{
+	display: inline-block;
+}
+#ingredientstable{
+	margin-left: auto;
+	margin-right: auto;
+}
+#ingredientsearchbox{
+	border: solid black;
+	margin: 5px;
+}
+#addingredientsearch{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 23%
+}
+#deleteingredientsearch{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 5%;
+}

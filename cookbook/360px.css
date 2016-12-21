@@ -1,0 +1,687 @@
+/*Mobile stylesheet*/
+
+/*|Body*/
+body {
+        background-color: #6488a8;
+	margin: 0px;
+	padding: 0px;
+	min-width: 1000px;
+}
+/*|Tables*/
+#steplist, #recipelist, #ingredientlist{
+	display: inline-block;
+	margin-top: 70px;
+}
+table, textarea{
+	background-color: #eed8ae;
+	border-radius: 15px;
+}
+table, td, th, #recipebutton, input[type="submit"], input[type="button"], textarea, #donelist {
+	font-family: Arial, Verdana, "Times New Roman";
+	font-size: 50px;
+	color: black;
+}
+.hover{
+        box-shadow: 4px 4px 4px #1c2731;
+}
+h2{
+	font-size: 50px;
+}
+h1, h2, h3{
+        font-family: Arial, Verdana, "Times New Roman";
+}
+td, th {
+	border-collapse: collapse;
+}
+td{
+	/*padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	padding-left: 0px;*/
+	padding: 3px;
+	margin-left: 0px;
+}
+th{
+	padding: 5px;
+}
+tr:nth-child(2n){
+	background-color: #98896f;
+}
+a, p {
+	font-family: Arial, Verdana, "Times New Roman";
+}
+.headlink:link, .headlink:visited{
+	font-size: 25px;
+	transition: background-color .3s;
+	display: inline-block;
+	border: 2px solid #374e62;
+	border-radius: 6px;
+	color: black;
+	background-color: #98896f;
+	padding: 50px 25px;
+	margin-right: 5px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: top;
+	float: left;
+	}
+.headlink:hover {
+	transition: background-color .3s;
+	background-color: #eed8ae;
+}
+.headlink:active, #recipebutton:active {
+        text-decoration: underline;
+}
+input[type="checkbox"]{
+        display: none;
+}
+input[type="checkbox"] + label span{
+        display:inline-block;
+        margin-left: 15px;
+        width:60px;
+        height:60px;
+        cursor: pointer;
+        background:url(baseimages/mobilecheck.png) left top no-repeat;
+        border: 2px solid black;
+        border-radius: 5px;
+}
+input[type="checkbox"]:checked + label span{
+        background:url(baseimages/mobilecheck.png) -60px top no-repeat;
+}
+/*|Banner on each page*/
+#banner {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 0px;
+	width: 100%;
+	background-color: #496883;
+	border: 3px solid #374e62;
+	border-right: none;
+	border-top: none;
+	border-left: none;
+	padding-bottom: 150px;
+	padding-top:5px;
+	box-shadow: 0px 4px 4px #1c2731;
+	margin-right: 0px;
+}
+/*|Text fields*/
+#searchbox{
+        display: inline-block;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 2px solid #374e62;
+        border-top: 3px solid #374e62;
+        border-bottom: 3px solid #374e62;
+        border-left: 3px solid #374e62;
+        padding: 5px;
+        margin-top: 3px;
+        background-color: #eed8ae;
+        vertical-align: top;
+        float: left;
+}
+textarea {
+        border: 2px solid black;
+        padding: 5px;
+}
+input[type=text]:focus, #recipebutton:focus, textarea:focus, #donelist:focus{
+        outline: none;
+}
+#subsearch{
+	display: relative;
+	margin-top: 3px;
+	vertical-align: top;
+	float: left;
+}
+#subsearch:focus{
+	outline:none;
+}
+input[type="text"], #inputwhattodo{
+	background-color: #eed8ae;
+	border: 3px solid #374e62;
+	height: 35px;
+	font-size: 17px;
+	border-radius: 5px;
+	padding: 5px;
+	}
+/*|Buttons*/
+/*Buttons within table*/
+#recipebutton{
+	cursor: pointer;
+        transition: background-color .2s;
+        border: none;
+        background: none;
+        width: 100%;
+	height: 100%;
+	white-space: normal;
+}
+#recipebutton:hover{
+        transition: background-color .2s;
+        background-color: #c7b491;
+}
+input[type="submit"], input[type="button"], #fileup, #donelist{
+	transition: background-color .3s;
+	border: 2px solid black;
+	background-color: #98896f;
+	border-radius: 5px;
+}
+input[type="submit"]:active, input[type="button"]:active, #donelist:active{
+	outline: none;
+	text-decoration: underline;
+}
+input[type="submit"]:hover, input[type="button"]:hover, #donelist:hover{
+	background-color: #eed8ae;
+}
+
+#deletebutton:hover{
+	transition: background-color .3s;
+	background-color:red;
+	cursor: pointer;
+}
+/**/
+#ingredientnum, #stepnum, #hournum, #minutenum{
+	width: 45px;
+}
+/*|Classes*/
+/*|Left cells in table*/
+.left, #recipebutton{
+	border-radius: 15px 0px 0px 15px;
+}
+/*|Right cells in table*/
+.right{
+	border-radius: 0px 15px 15px 0px;
+}
+/*|Numbers in table*/
+.number{
+	text-align: center;
+}
+.number.left{
+	padding-left: 5px;
+}
+/*Animations*/
+/*@-webkit-keyframes addstep {
+	0%	{padding:0px;}
+	25%	{padding:200px;}
+	50%	{padding:0px;}
+	75%	{padding:100px;}
+	100%	{padding:0px;}
+}
+@keyframes test addstep {
+	0%      {padding:0px;}
+	25%     {padding:200px;}
+	50%     {padding:0px;}
+	75%     {padding:100px;}
+	100%    {padding:0px;
+}*/
+/*HEADER PAGE*/
+#headertop{
+position: absolute; left: 0px;
+}
+#cookbooklink{
+	margin-left: 5px;
+	display: none;
+}
+#addlink{
+	display: none;
+}
+#listlink{
+	display: none;
+}
+#cookbookimage{
+	position: absolute;
+	left: 40px;
+	display: block;
+	height: 130px;
+	width: 130px;
+}
+#insertimage{
+	position: absolute;
+	display: block;
+	left: 370px;
+	height: 130px;
+	width: 130px;
+}
+#listimg{
+	position: absolute;
+	left: 210px;
+	height: 130px;
+	width: 130px;
+}
+#searchdiv{
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+#searchbox{
+	float: left;
+        display: inline-block;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 2px solid #374e62;
+        border-top: 3px solid #374e62;
+        border-bottom: 3px solid #374e62;
+        border-left: 3px solid #374e62;
+        padding: 5px;
+        margin-top: 0px;
+        background-color: #eed8ae;
+        float: left;
+	font-size: 40px;
+	height: 100px;
+	width: 300px;
+}
+#subsearch{
+        margin-top: 0px;
+	height: 94px;
+	width: 94px;
+	border-left: none;
+	border-right: 3px solid #374e62;
+	border-top: 3px solid #374e62;
+	border-bottom: 3px solid #374e62;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#advsearchlink{
+display: none;
+}
+/*COOKBOOK PAGE AND SEARCHRES PAGE*/
+#bookbody{
+	width: 100%;
+	text-align: center;
+}
+#recipelist{
+	margin-top: 0px;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 10px;
+}
+#recipelistrow{
+	height: 150px;
+}
+#recipe{
+        padding: 0px;
+	/*max-width: 2000px;*/
+}
+#noresultdiv{
+width: 100%; word-break: break-all; text-align: center;
+}
+#noresult{
+margin-top: 100px; cols: 10;
+}
+/*INSERT PAGE AND EDIT PAGE*/
+#recinfoinput{
+	width:100%;
+	margin-top: 20px;
+}
+#recinputtable{
+	margin-left: auto;
+	margin-right: auto;
+}
+#recinputtable2{
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#recinputtitle{
+	font-size: 40px;
+	width: 380px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border: solid black; 
+	margin-left: 10px; 
+	margin-right: 5px;
+}
+#hournum{
+	font-size: 40px;
+	width: 3em;
+        padding-top: 25px;
+        padding-bottom: 25px;
+	border: solid black; 
+	margin-left: 15px;
+	margin-right: 5px;
+}
+#minutenum{
+	font-size: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+	border: solid black;
+	width: 3em; 
+	margin-left: 33px;
+	margin-right: 5px;
+}
+#typecolumn{
+	width: 170px;
+}
+#typeinput{
+	font-size: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+	border: solid black; 
+	margin-left: 5px; 
+	margin-right: 5px; 
+	width: 250px;
+}
+#genrecolumn{
+	width: 170px;
+}
+#genreinput{
+	font-size: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+	border: solid black; 
+	margin-left: 5px; 
+	margin-right: 10px; 
+	width: 250px;
+}
+#calperserv{
+	font-size: 40px;
+	padding-top: 25px;
+        padding-bottom: 25px;
+	border: solid black; 
+	width: 3em; 
+	margin-left: 130px;
+}
+#numserv{
+	font-size: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+	border: solid black; 
+	width: 3em; 
+	margin-left: 60px;
+}
+#stepsinputdiv{
+	float: left; 
+	margin-top: 20px; 
+	margin-left: 5%;
+	margin-bottom: 50px;
+}
+#inputwhattodo{
+	font-size: 40px;
+	width: 19em; 
+	height: 4em; 
+	border: solid black; 
+	margin-right: 10px; 
+	margin-left: 5px; 
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	resize: none;
+}
+#addstep{
+	cursor: pointer;
+	float: left; 
+	margin-top: 30px; 
+	margin-bottom: 10px; 
+	margin-left: 2%;
+}
+#deletestep{
+	cursor: pointer;
+	margin-top: 30px; 
+	float: left; 
+	margin-left: 2%;
+}
+#finalsubmit{
+	cursor: pointer;
+	float: left; 
+	margin-top: 30px; 
+	margin-left: 2%; 
+	margin-bottom: 10px;
+}
+#ingredientinputdiv{ 
+	margin-top: 20px; 
+	margin-left: 5%;
+}
+#ingredientbox{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 450px;
+	font-size: 40px;
+	margin-left: 10px; 
+	margin-right: 5px; 
+	margin-top: 2px; 
+	margin-bottom: 2px; 
+	border: solid black;
+}
+#amountbox{
+	font-size: 40px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-left: 5px; 
+	margin-right: 10px; 
+	margin-top: 2px; 
+	margin-bottom: 2px; 
+	border: solid black; 
+	width: 10em;
+}
+#addingredient{
+cursor: pointer;
+margin-top: 30px; margin-bottom: 10px; float: left; margin-left: 10%;
+}
+#deleteingredient{
+cursor: pointer;
+margin-top: 30px; float: left; margin-left:5%;
+}
+/*RECIPE PAGE*/
+#recbody{
+width: 100%;
+height: 100%;
+text-align: center;
+}
+#listtheingredients{
+margin-right: 3%;
+margin-left: 3%;
+}
+#listthesteps{
+margin-right: 3%;
+margin-left: 3%;
+}
+/*side area*/
+#siderevealdiv{
+	margin-top: -16px;
+	width: 100%;
+	height: 104px;
+}
+#sidereveal{
+	outline: none;
+	background-color: #496883;
+        border-bottom: 3px solid #374e62;
+        border-left: 3px solid #374e62;
+        border-right: 3px solid #374e62;
+	border-top: none;
+	width: 100%;
+	height: 100%;
+}
+#siderevealimg{
+	width: 100%;
+	height: 100%;
+}
+/*@-webkit-keyframes slidein{
+	0%	{left: 1000px;}
+	20%	{left: 700px;}
+	40%	{left: 500px;}
+	60%	{left: 250px;}
+	70%	{left: 150px;}
+	80%	{left: 100px;}
+	90%	{left: 50px;}
+	100%	{left: 0px;}
+}*/
+.slidein{
+	transform: translate3d(0px, 0px, 0px);
+}
+.slideout{
+	transform: translate3d(1000px, 0px, 0px);
+}
+#side{
+	visibility: hidden;
+	text-align: center; 
+	position: fixed; 
+	width: 100%; 
+	right:0px; 
+	top:261px; 
+	height: 100%;  
+	padding-left: 1.5%; 
+	padding-right: 1.5%;
+	border-left: 3px solid #374e62; 
+	background-color: #496883;
+	transition: transform 0.5s ease-in-out;
+}
+/*top buttons*/
+#delform{
+margin-bottom: 1%;
+}
+#editform{
+margin-bottom: 1%;
+}
+#deletebutton{
+cursor: pointer;
+display: block; width: 7em; margin-top: 1%; margin-left: auto; margin-right: auto;
+}
+#editbutton{
+cursor: pointer;
+display: block; width: 7em; margin-left: auto; margin-right: auto;
+}
+/*Calorie info*/
+#calinfo{
+margin-right: auto; margin-left: auto; margin-top: 2%; table-layout: fixed; margin-bottom: 10px;
+}
+/*Image operations*/
+#fileupform{
+}
+#imageselect{
+	font-size: 50px;
+}
+#filechangeform{
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: 1%;
+}
+#filedelform{
+margin-bottom: 1%;
+}
+#sideform{
+margin-top: 1%;
+}
+#imagediv{
+height: 25%;
+}
+#recimage{
+max-width: 100%; max-height: 100%; border-radius: 15px; border: 2px solid black;
+}
+#fileup{
+	padding: 5px; 
+	margin-top: 10px;
+}
+#upimg{
+	cursor: pointer;
+	margin-top: 2px;
+}
+#changeimg{
+	cursor: pointer;
+	margin-top: 2px;
+	position: relative; 
+	display: inline-block; 
+	right: 0px;
+}
+/*Fake table formatting for button layout*/
+#setup{
+display: block; margin-right: auto; margin-left: auto; margin-left: 10px; margin-right: 10px margin-bottom: 0px;
+}
+#tab{
+	display: table;
+	margin-left: 17%;
+}
+#rw{
+display: table-row;
+}
+#col1{
+display: table-cell;
+}
+#col2{
+display: table-cell; padding-left: 2px;
+}
+#subremove{
+cursor: pointer;
+margin-top: 2px; margin-right: 2px; position: relative; display: inline-block; right: 0px;
+}
+/*Note stuff*/
+#addnote{
+display: block; margin-right: auto; margin-left: auto; margin-top: 15px; width:7em;
+cursor: pointer;
+}
+#notetext{ 
+	width: 90%; 
+	height: 6em;  
+	margin-top: 10px; 
+	resize: none;
+}
+#savenote{
+margin-top: 10px;
+cursor: pointer;
+}
+/*LISTGEN PAGE*/
+#genheaderdiv{
+        margin-top: 20px;
+        text-align: center;
+}
+#listdiv{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.listheader{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+        background-color: #98896f;
+        border: 3px solid black;
+        border-radius: 5px;
+}
+#listgenrecipes{
+        margin-left: auto;
+        margin-right: auto;
+}
+#sublist{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+}
+/*LIST PAGE*/
+#listbody{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#listbuffer{
+        margin-top: 20px;
+}
+.reclist{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+}
+.reclist td{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 20px;
+}
+.reclist .right{
+	padding-right: 25px;
+}
+#listend{
+	margin-top: 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-bottom: 15px;
+}
+#clearlist{
+        margin-left: 13%;
+        margin-right: 30px;
+}
+#donelist{
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 6px;
+        padding-right: 6px;
+        text-decoration: none;
+}
+
