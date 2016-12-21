@@ -1,0 +1,1 @@
+Need IMAGES directory but can't leave it empty.
